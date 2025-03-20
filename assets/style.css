@@ -410,3 +410,9 @@ img {
 .carousel-inner {
   min-height: 160px;
 }
+.tags-bar .nav-link.active-tag {
+  background-color: #7a732f !important; /* Dorée */
+  color: #ffffff !important; /* Texte blanc */
+  border-radius: 5px; /* Joli arrondi */
+  transition: all 0.3s ease-in-out; /* Animation agréable */
+}
