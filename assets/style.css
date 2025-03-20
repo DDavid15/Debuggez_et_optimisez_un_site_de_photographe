@@ -97,6 +97,7 @@ body {
 .picture img {
   width: 100%;
 }
+
 #about-me,
 .form-container {
   flex: 2;
@@ -328,4 +329,33 @@ input[type="submit"] {
   .picture {
     width: 80%;
   }
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.img-instagram {
+  aspect-ratio: 1 / 1;
+  width: 20px;
+  height: auto;
+}
+
+.carousel-item img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}
+
+.gallery img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+}
+
+.picture img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
 }
