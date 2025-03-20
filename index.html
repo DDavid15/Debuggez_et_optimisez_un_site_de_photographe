@@ -4,40 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index" />
+
     <title>
       Photographe professionnel à Bordeaux : Découvrez nos Tarifs Attractifs !
     </title>
     <meta
       name="description"
-      content="Photographe professionnel à Bordeaux : tarifs
-    transparents pour mariage, séance photo grossesse, portraits et événements.
-    Découvrez nos offres !"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/bootstrap/bootstrap.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/style.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <!-- Chargement des polices -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Chargement des polices avec media="print" + onload -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-      media="print"
-      onload="this.media='all'"
+      content="Photographe professionnel à Bordeaux : tarifs transparents pour mariage, séance photo grossesse, portraits et événements. Découvrez nos offres !"
     />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta
+      property="og:title"
+      content="Nina Carducci | Photographe Professionnel Bordeaux"
+    />
+    <meta
+      property="og:description"
+      content="Photographe professionnel pour mariage, portraits, événements à Bordeaux."
+    />
+    <meta
+      property="og:image"
+      content="https://votresite.com/assets/images/og-image.jpg"
+    />
+    <meta property="og:url" content="https://votresite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nina Carducci Photographe à Bordeaux" />
+    <meta
+      name="twitter:description"
+      content="Photographe professionnel pour vos événements à Bordeaux."
+    />
+    <meta
+      name="twitter:image"
+      content="https://votresite.com/assets/images/twitter-image.jpg"
+    />
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <!-- Données structurées Schema.org (SEO local) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Nina Carducci - Photographe Bordeaux",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "68 avenue Alsace-Lorraine",
+          "addressLocality": "Bordeaux",
+          "postalCode": "33200",
+          "addressCountry": "FR"
+        },
+        "telephone": "05 56 67 78 89",
+        "openingHours": "Mo-Fr 10:00-19:00"
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-FND63F31KT"
@@ -48,16 +74,12 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-FND63F31KT");
     </script>
-    <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-      defer
-    ></script>
+
+    <!-- Scripts JS (ordre précis à respecter) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
     <script src="./assets/maugallery.js" defer></script>
     <script src="./assets/scripts.js" defer></script>
   </head>
@@ -123,7 +145,7 @@
               alt="homme en costume noir"
               width="1920"
               height="1080"
-              loading="lazy"
+              loading="eager"
             />
           </div>
           <div class="carousel-item">
@@ -133,7 +155,7 @@
               alt="groupe de personnes"
               width="1920"
               height="1080"
-              loading="lazy"
+              loading="eager"
             />
           </div>
           <div class="carousel-item">
@@ -143,7 +165,7 @@
               alt="photo de mariage"
               width="1920"
               height="1080"
-              loading="lazy"
+              loading="eager"
             />
           </div>
         </div>

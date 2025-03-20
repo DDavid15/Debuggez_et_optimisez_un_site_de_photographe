@@ -85,52 +85,25 @@
           a(`#${e}`).modal("toggle");
       },
       prevImage() {
-        let t = null;
-        a("img.gallery-item").each(function () {
-          a(this).attr("src") === a(".lightboxImage").attr("src") &&
-            (t = a(this));
-        });
-        let e = a(".tags-bar span.active-tag").data("images-toggle"),
-          l = [];
-        "all" === e
-          ? a(".item-column").each(function () {
-              a(this).children("img").length && l.push(a(this).children("img"));
-            })
-          : a(".item-column").each(function () {
-              a(this).children("img").data("gallery-tag") === e &&
-                l.push(a(this).children("img"));
-            });
-        let i = 0,
-          s = null;
-        a(l).each(function (e) {
-          a(t).attr("src") === a(this).attr("src") && (i = e);
-        }),
-          (s = l[i] || l[l.length - 1]),
-          a(".lightboxImage").attr("src", a(s).attr("src"));
+        let currentSrc = $(".lightboxImage").attr("src");
+        let imagesList = $(".item-column:visible img"); // images actuellement visibles (selon filtre actif)
+        let currentIndex = imagesList.index(
+          imagesList.filter(`[src="${currentSrc}"]`)
+        );
+        let prevIndex =
+          (currentIndex - 1 + imagesList.length) % imagesList.length;
+        let prevSrc = imagesList.eq(prevIndex).attr("src");
+        $(".lightboxImage").attr("src", prevSrc);
       },
       nextImage() {
-        let t = null;
-        a("img.gallery-item").each(function () {
-          a(this).attr("src") === a(".lightboxImage").attr("src") &&
-            (t = a(this));
-        });
-        let e = a(".tags-bar span.active-tag").data("images-toggle"),
-          l = [];
-        "all" === e
-          ? a(".item-column").each(function () {
-              a(this).children("img").length && l.push(a(this).children("img"));
-            })
-          : a(".item-column").each(function () {
-              a(this).children("img").data("gallery-tag") === e &&
-                l.push(a(this).children("img"));
-            });
-        let i = 0,
-          s = null;
-        a(l).each(function (e) {
-          a(t).attr("src") === a(this).attr("src") && (i = e);
-        }),
-          (s = l[i] || l[0]),
-          a(".lightboxImage").attr("src", a(s).attr("src"));
+        let currentSrc = $(".lightboxImage").attr("src");
+        let imagesList = $(".item-column:visible img"); // images actuellement visibles (selon filtre actif)
+        let currentIndex = imagesList.index(
+          imagesList.filter(`[src="${currentSrc}"]`)
+        );
+        let nextIndex = (currentIndex + 1) % imagesList.length;
+        let nextSrc = imagesList.eq(nextIndex).attr("src");
+        $(".lightboxImage").attr("src", nextSrc);
       },
       createLightBox(a, t, e) {
         a.append(`<div class="modal fade" id="${
