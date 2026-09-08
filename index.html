@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index" />
     <title>
       Photographe professionnel à Bordeaux : Découvrez nos Tarifs Attractifs !
     </title>
     <meta
       description="Photographe professionnel à Bordeaux : tarifs transparents pour mariage, séance photo grossesse, portraits et événements. Découvrez nos offres !"
     />
-    <meta name="robots" content="index" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +18,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
     />
-    <meta charset="UTF-8" />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -294,18 +294,36 @@
             N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
           </p>
           <form action="" method="post">
-            <label>Nom</label>
-            <input type="text" name="nom" id="nom" />
-            <label>Email</label>
-            <input type="email" name="email" id="email" />
-            <label>Message</label>
+            <label for="nom">Nom</label>
+            <input
+              type="text"
+              name="nom"
+              id="nom"
+              aria-label="Nom complet"
+              required
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              aria-label="Email"
+              required
+            />
+            <label for="message">Message</label>
             <textarea
               name="message"
               id="message"
+              aria-label="Saisissez votre message"
               cols="30"
               rows="10"
+              required
             ></textarea>
-            <input type="submit" value="Envoyer" />
+            <input
+              type="submit"
+              value="Envoyer"
+              aria-label="Envoyer le message"
+            />
           </form>
         </div>
         <div class="picture right">
