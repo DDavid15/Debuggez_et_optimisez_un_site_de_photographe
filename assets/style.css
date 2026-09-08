@@ -92,7 +92,7 @@ body {
 #gallery {
   	min-height: 100vh; 
 }
-*/
+    */
 .title {
   text-align: center;
   padding-block: 2em;
@@ -103,7 +103,7 @@ body {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #8f873d; /* couleur plus foncée pour améliorer le contraste */
+  background-color: #7a732f; /* couleur plus foncée pour améliorer le contraste */
   border-radius: 0;
 }
 .nav-pills .nav-link {
